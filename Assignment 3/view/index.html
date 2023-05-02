@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+    <title>Canadian Covid Database Assignment</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Canadian Covid Database Assignment</h1>
+    <div class="tab">
+        <button class="tablinks">Find</button>
+        <button class="tablinks">Range</button>
+    </div>
+
+    <div id="find-entry" class="tabcontent">
+        <form>
+            <label for="find-date">Date</label>
+            <input type="date" id="find-date-search">
+            <div>
+                <button id="btn-find-entry">Find</button>
+                <output id="find-out"></output>
+            </div>
+        </form>
+        <hr>
+        <h2>Entry Information</h2>
+        <div class="flex-container">
+            <div class="wrapper">          
+                <label for="find-_id">ID</label>
+                <input type="text" id="find-_id" disabled>
+            </div>
+            <div class="wrapper">          
+                <label for="find-iso_code">ISO Code</label>
+                <input type="text" id="find-iso_code" disabled>
+            </div>
+            <div class="wrapper">          
+                <label for="find-continent">Continent</label>
+                <input type="text" id="find-continent" disabled>
+            </div>
+            <div class="wrapper">          
+                <label for="find-location">Location</label>
+                <input type="text" id="find-location" disabled>
+            </div>
+            <div class="wrapper">          
+                <label for="find-date">Date</label>
+                <input type="text" id="find-date" disabled>
+            </div>
+            <div class="wrapper">          
+                <label for="find-total_cases">Total Cases</label>
+                <input type="text" id="find-total_cases">
+            </div>
+            <div class="wrapper">          
+                <label for="find-new_cases">New Cases</label>
+                <input type="text" id="find-new_cases">
+            </div>
+            <div class="wrapper">          
+                <label for="find-total_deaths">Total Deaths</label>
+                <input type="text" id="find-total_deaths">
+            </div>
+            <div class="wrapper">          
+                <label for="find-new_deaths">New Deaths</label>
+                <input type="text" id="find-new_deaths">
+            </div>
+        </div>        
+        <div class="flex-button-container">
+            <button id="btn-update-entry">Update</button>
+            <button id="btn-delete-entry">Delete</button>
+            <output id="update-delete-out"></output>
+        </div>
+    </div>
+    
+    <div id="range" class="tabcontent">
+        <form>
+            <label for="find-date-start">Start Date</label>
+            <input type="date" id="find-date-start-search">
+            <label for="find-date-end">End Date</label>
+            <input type="date" id="find-date-end-search">
+            <div>
+                <button id="btn-find-range">Calculate deaths</button>
+                <output id="find-out"></output>
+            </div>
+        </form>
+        <hr>
+        <h2>Total Deaths in Range:</h2>
+        <h2 id="numberDead"></h2> 
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/find.js"></script>
+</body>
